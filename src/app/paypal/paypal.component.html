@@ -1,0 +1,29 @@
+<h2>User CRUD</h2>
+
+<input
+  type="text"
+  placeholder="Enter name"
+  [(ngModel)]="newUserName"
+/>
+
+<button (click)="addUser(users.length)">
+  Add User
+</button>
+
+<ul>
+
+  <li *ngFor="let user of users">
+
+    {{ user.name }}
+
+    <button (click)="editUser(user)">
+      Edit
+    </button>
+
+    <button (click)="deleteUser(user.id)">
+      Delete
+    </button>
+
+  </li>
+
+</ul>

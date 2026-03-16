@@ -1,0 +1,40 @@
+<h1>Custom Form Control Example</h1>
+<h2>Reactive Forms</h2>
+<form [formGroup]="productReviewForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="productName">Product Name:</label>
+    <input id="productName" formControlName="productName">
+    <div *ngIf="productReviewForm.get('productName')?.invalid && productReviewForm.get('productName')?.touched" style="color: red;">
+      Product name is required.
+    </div>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <label for="rating">Rating:</label>
+    <mf-star-rate formControlName="rating" [maxRating]="5"></mf-star-rate>
+     <div *ngIf="productReviewForm.get('rating')?.invalid && productReviewForm.get('rating')?.touched" style="color: red;">
+      Rating is required and must be at least 1.
+    </div>
+  </div>
+
+  <div style="margin-top: 15px;">
+    <button type="submit">Submit Review</button>
+    <button type="button" (click)="setRating(5)" style="margin-left: 5px;">Set Rating to 5</button>
+    <button type="button" (click)="setRating(null)" style="margin-left: 5px;">Clear Rating</button>
+    <button type="button" (click)="toggleDisable()" style="margin-left: 5px;">Toggle Disable</button>
+  </div>
+</form>
+
+<ng-select [(ngModel)]="selectedCar">
+    @for (car of cars; track car.id) {
+        <ng-option [value]="car.id">{{car.name}}</ng-option>
+    }
+</ng-select>
+
+<!--Using items input-->
+<ng-select [items]="cars"
+           bindLabel="name"
+           bindValue="id"
+           [(ngModel)]="selectedCar">
+</ng-select>
+

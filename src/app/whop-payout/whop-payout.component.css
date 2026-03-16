@@ -1,0 +1,59 @@
+.whop-dialog-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.dialog-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  color: #666;
+}
+
+.dialog-content {
+  flex: 1;
+  padding: 0 24px 24px;
+  overflow: auto;
+}
+
+.checkout-intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.checkout-intro p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.start-checkout-btn {
+  font-size: 1.1rem;
+  padding: 12px 32px;
+}
+
+.embed-container {
+  width: 100%;
+  min-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.embed-container > div {
+  width: 100% !important;
+  min-height: 500px !important;
+}

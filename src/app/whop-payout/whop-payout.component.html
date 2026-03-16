@@ -1,0 +1,23 @@
+<div class="whop-dialog-container">
+  <div class="dialog-header">
+    <h2>Whop Checkout</h2>
+    <button mat-icon-button (click)="closeCheckout()" class="close-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  
+  <div class="dialog-content">
+    @if (!open) {
+      <div class="checkout-intro">
+        <p>Click the button below to start your Whop checkout process.</p>
+        <button mat-raised-button color="primary" (click)="openCheckout()" class="start-checkout-btn">
+          Start Checkout
+        </button>
+      </div>
+    }
+    
+    @if (open) {
+      <div #embedHost class="embed-container"></div>
+    }
+  </div>
+</div>

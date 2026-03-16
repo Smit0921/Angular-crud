@@ -1,0 +1,29 @@
+<!-- <button class="btn btn-primary"  (click)="sendMessage()">Send Message</button> -->
+<h3>Child Component</h3>
+<p>Received from Parent: {{ childvalue }}</p>
+
+<div class="row">
+<div class="col-3">
+    {{firstname()}} - {{lastname()}}
+  </div>
+  <div class="col-3">
+
+    fullname: {{fullname()}}
+  </div>
+  <div class="col-3">
+
+   {{count()}}
+  </div>
+  <div class="col-3">
+    {{name}}
+   </div>
+  <div class="col-6">
+  <button class=" btn btn-success" (click)="Submit()">change first</button>&nbsp;
+  <button class=" btn btn-success" (click)="changeLastname()">change last</button>&nbsp;
+  <button class=" btn btn-success" (click)="increment()">increment</button>
+</div>
+</div>
+<!-- <button type="submit" class="btn btn-primary" (click)="getUser()">submit</button> -->
+ <!-- <app-user [childvalue]="childvalue"></app-user> -->
+<app-ag-grid [rowData]="rowData()" [colDefs]="ColDef"></app-ag-grid>
+

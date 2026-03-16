@@ -1,0 +1,36 @@
+.star-rating-container {
+    display: inline-block;
+  }
+  
+  .star {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #ccc; /* Empty star color */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    margin-right: 2px; /* Spacing between stars */
+  }
+  
+  .star:hover {
+    color: #ffcc00; /* Hover color */
+  }
+  
+  .star.filled {
+    color: #f0ad4e; /* Filled star color (e.g., orange) */
+  }
+  
+  .star.disabled {
+    cursor: not-allowed;
+    color: #eee; /* Disabled empty star */
+  }
+  
+  .star.filled.disabled {
+      color: #e0e0e0; /* Disabled filled star */
+  }
+  
+  /* Remove hover effect when disabled */
+  .star.disabled:hover {
+      color: #eee;
+  }
+  .star.filled.disabled:hover {
+       color: #e0e0e0;
+  }

@@ -1,0 +1,42 @@
+.paypal-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.load-button {
+  width: 100%;
+  padding: 12px;
+  background: #0070ba;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.load-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 16px;
+  color: #666;
+}
+
+.paypal-buttons {
+  margin-top: 16px;
+}
+
+.card_container { max-width: 420px; }
+.btn { padding: 8px 16px; cursor: pointer; }

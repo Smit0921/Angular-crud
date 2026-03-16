@@ -1,0 +1,25 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Full viewport height */
+  }
+  
+  mat-card {
+    width: 600px; /* Adjust width as needed */
+    padding: 20px;
+    text-align: center;
+  }
+  .form-container {
+    display: flex;
+    gap: 20px; /* Adjust spacing between fields */
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  mat-form-field {
+    flex: 1; /* Makes both fields take equal width */
+    min-width: 200px; /* Adjust as needed */
+  }
+  
+  

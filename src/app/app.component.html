@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="navigateToHome()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToUser()">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToClient()">Client</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToLogin()">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/form-array">Formaray</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/directive">directive</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link"  routerLink="/ag-grid">Ag-grid</a> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="navigateTopipe()">Pipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPaypal()">PayPal</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()"><mat-icon matSuffix>logout</mat-icon></a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+  
+</nav>
+<!-- <ng-select
+  [items]="getFlattenedItems()"
+  bindLabel="name"
+  bindValue="id"
+  [(ngModel)]="selectedItems"
+  [multiple]="true"
+  placeholder="Select categories"
+  [closeOnSelect]="false"
+>
+  <ng-template ng-option-tmp let-item="item" let-index="index">
+    <input
+      type="checkbox"
+      [checked]="selectedItems.includes(item.id)"
+      (change)="
+        $event.stopPropagation();
+        toggleSelection(item.id)
+      "
+    />
+    <span [style.margin-left.px]="item.parentId ? 20 : 0">{{ item.name }}</span>
+  </ng-template>
+
+  <ng-template ng-label-tmp let-item="item">
+    <span>{{ item.name }}</span>
+  </ng-template>
+</ng-select> -->
+
+<!-- </nav> 
+<div class="container">
+  <form [formGroup]="userForms" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput  formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Address</mat-label>
+      <textarea matInput formControlName="address"></textarea>
+    </mat-form-field>
+    <div class="full-width">
+      <label>Gender:</label>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="other">Other</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-label>
+     Intrest
+    </mat-label>
+    <section class="full-width" formGroupName="hobbies">
+      <mat-checkbox formControlName="is_frontend" value="frontend">Front-end</mat-checkbox>
+      <mat-checkbox formControlName="is_backend" value="backend">Back-end</mat-checkbox>
+      <mat-checkbox formControlName="is_other" value="other">Other</mat-checkbox>
+    </section>
+
+    <mat-form-field class="full-width">
+      <mat-label>City</mat-label>
+      <mat-select formControlName="city">
+        <mat-option value="las vegas">Las vegas</mat-option>
+        <mat-option value="new Yourk">New Yourk</mat-option>
+        <mat-option value="helcinky">helsinky</mat-option>
+        <mat-option value="paris">Paris</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button  type="submit" >Submit</button>
+  </form>
+
+</div> -->
+
+
+
+<router-outlet></router-outlet>

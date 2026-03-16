@@ -1,0 +1,12 @@
+<span class="star-rating-container">
+    <ng-container *ngFor="let filled of stars; let i = index">
+      <span
+        class="star"
+        [class.filled]="filled"
+        [class.disabled]="isDisabled"
+        (click)="rate(i + 1)"
+        (mouseover)="previewRating(i + 1)"
+        >
+        ★ </span>
+    </ng-container>
+  </span>

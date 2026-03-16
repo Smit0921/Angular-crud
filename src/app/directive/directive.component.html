@@ -1,0 +1,29 @@
+<p>directive works!</p>
+<p appHighlight>HEllo SMit</p>
+<h1>{{name}}</h1>
+<h1> Structural  Directive</h1>
+<div class="row">
+    <div class="">
+        <ul>
+            <li *ngFor="let item of items ">{{item}}</li>
+        </ul>
+        <span *ngIf="namevisable"> {{name}}</span><br>
+        <button type="submit" class="btn btn-success" (click)="hideName()">Hide</button>&nbsp;
+        <button type="submit" class="btn btn-success" (click)="showName()">show</button>
+
+
+    </div>
+    <div>
+        <h1> Attribute Directive</h1>
+        <h2>Pick a highlight color</h2>
+        <div>
+            <input type="radio" name="colors" (click)="color='lightgreen'">Green
+            <input type="radio" name="colors" (click)="color='yellow'">Yellow
+            <input type="radio" name="colors" (click)="color='cyan'">Cyan
+            <input type="radio" name="colors" (click)="color='purple'">purple
+       
+        </div>
+        <p [appHighlight]="color">Highlight me!</p>
+    
+    </div>
+</div>

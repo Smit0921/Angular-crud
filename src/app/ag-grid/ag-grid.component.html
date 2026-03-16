@@ -1,0 +1,30 @@
+<div class="content" style="width: 100%; height: 90%; ">
+   <span>Filter text:</span>&nbsp;
+  <input type="text" placeholder="Search Text......." style="width: 90%;" class="form-control" (input)="applyFilter()"  [(ngModel)]="filterText" ><br>
+ 
+    <ag-grid-angular 
+    #gridsearch
+      style="width: 100%; height: 100%;"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      [defaultColDef]="defaultColDef"
+      [pagination]="true"
+      [paginationPageSize]="paginationPageSize"
+      [paginationPageSizeSelector]="paginationPageSizeSelector"
+      [rowSelection]="rowSelection"
+      (gridReady)="onGridReady($event)"
+      [singleClickEdit]="true"
+      undoRedoCellEditing="undoRedoCellEditing"
+      [undoRedoCellEditingLimit]="undoRedoCellEditingLimit"
+      rowGroupPanelShow="always" 
+      [groupDefaultExpanded]="groupDefaultExpanded"
+    />
+  </div>
+
+
+
+
+
+
+  
+

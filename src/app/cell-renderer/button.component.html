@@ -1,0 +1,23 @@
+@if (params?.column?.colId === 'Action') {
+@if(params?.data?.Address==='modasa'){
+
+<button (click)="onButtonDElete()" class="btn btn-danger" style="width: 100px;">Cancle</button>
+}
+@else{
+
+<button (click)="onButtonClick()" class="btn btn-success" style="width: 100px;">Pending</button>
+}
+
+}
+
+@if (params?.column?.colId === 'Select') {
+<select (change)="onDropdownChange($event)">
+  <option *ngFor="let country of countries" [value]="country.name" [selected]="country === params.value">
+    {{ country.name }}
+  </option>
+</select>
+}
+
+@if (params?.column?.colId === 'Checkbox') {
+<input type="checkbox" [checked]="params.value===true" (change)="onCheckboxChange($event)" />
+}
