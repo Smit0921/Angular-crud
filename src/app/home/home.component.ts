@@ -156,7 +156,22 @@ items.forEach(item=>(console.log(item)))
     for (let i = 0; i < word.length; i++) {
       console.log('word[i]: ', word[i].repeat(count[i]));
     }
+const d = new Date();
+const day = d.getDate();
+const month = d.getMonth() + 1;
+const year = d.getFullYear();
 
+const formatted = `${day}-${month}-${year}`;
+console.log('formatted: ', formatted);
+let n = 5;
+let a = 0, b = 1;
+
+for(let i=0;i<n;i++){
+  console.log(a);
+  let temp = a + b;
+  a = b;
+  b = temp;
+}
     effect(() => {
     const data=this.Signal()
     console.log('data: ', data);
@@ -165,7 +180,9 @@ items.forEach(item=>(console.log(item)))
     })
     })
     
-  
+      var smit='smit'
+    var smit='cdcv'
+    console.log('smit: ', smit);
   }
   loaduserData() {
     this.userinfo = JSON.parse(localStorage.getItem('userinfo') || '[]');
@@ -251,6 +268,9 @@ items.forEach(item=>(console.log(item)))
         maxWidth: '800px',
         height: '80%',
         disableClose: false
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('Dialog closed with result:', result);
       });
     }
 

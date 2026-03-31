@@ -21,7 +21,8 @@
     <button type="submit">Submit Review</button>
     <button type="button" (click)="setRating(5)" style="margin-left: 5px;">Set Rating to 5</button>
     <button type="button" (click)="setRating(null)" style="margin-left: 5px;">Clear Rating</button>
-    <button type="button" (click)="toggleDisable()" style="margin-left: 5px;">Toggle Disable</button>
+    <button type="button" (click)="toggleDisable()" style="margin-left: 5px;" id="myButton">  {{this.productReviewForm.get('rating')?.disabled ? 'Enable Rating' : 'Disable Rating' }}
+</button>
   </div>
 </form>
 
@@ -38,3 +39,4 @@
            [(ngModel)]="selectedCar">
 </ng-select>
 
+<!-- <button (click)="click()">Click</button> -->

@@ -11,8 +11,9 @@
 </button>
 
 <ul>
-
-  <li *ngFor="let user of users">
+@for(user of users;track $index){
+  
+  <li>
 
     {{ user.name }}
 
@@ -25,5 +26,6 @@
     </button>
 
   </li>
+}
 
 </ul>

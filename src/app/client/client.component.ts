@@ -1,5 +1,5 @@
 
-import { Component, inject, Input, OnInit} from '@angular/core';
+import { Component, inject, Input, OnInit, signal} from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { MfStarRateComponent } from '../mf-star-rate/mf-star-rate.component';
@@ -25,12 +25,12 @@ export class ClientComponent {
         { id: 3, name: 'Opel' },
         { id: 4, name: 'Audi' },
     ];
-  // For Template-Driven Example (optional)
+// For Template-Driven Example (optional)s        
 
   constructor(private fb: FormBuilder) {
      this.productReviewForm = this.fb.group({
-      productName: ['', Validators.required],
-      rating: [3, [Validators.required, Validators.min(1)]] // Initial value = 3, required
+      productName: ['',Validators.required],
+      rating: [3,[Validators.required, Validators.min(1)]] // Initial value = 3, required
     });
   }
 
@@ -60,9 +60,29 @@ export class ClientComponent {
           ratingControl.enable();
       } else {
           ratingControl?.disable();
+          }
       }
+      
+      
+      
+   
+  counterFn = this.smit();
+
+  smit(): () => void {
+    let count = 0;
+
+    return () => {
+      count+2;
+      console.log(count);
+    };
   }
 
+  click() {
+    this.counterFn();
+  }
+
+  }
+
+function add(a:any, b:any) {
+  return a + b;
 }
-
-

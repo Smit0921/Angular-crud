@@ -12,6 +12,7 @@ import { passwordMatch } from '../validators/password-match.validator';
 import { __values } from 'tslib';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { HighlightDirective } from '../highlight.directive';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class SignupComponent {
     
   signupform: FormGroup;
   _fb=inject(FormBuilder)
-    
+  whitespace=inject(HighlightDirective)
+
    mobileregix = /^(\+\d{1,3}[- ]?)?\d{10}$/;
    emailRegix = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
  
